@@ -1,4 +1,4 @@
-# BoilerPlateGenerator
+# Skeleton Code Generator
 
 ## Airbus Aerothon 4.0 Finale Round
 Problem Statement :
@@ -7,9 +7,13 @@ Problem Statement :
 - You must build an application that is innovative using a layered approach with Multi-Tenancy, Modular Design, and well-documented with Solid Principles to support web applications.
 
 # About the Project
-This is a web application running on Django web framework, that takes input from the user (Frontend and Backend framework) and creates a dummy project folder (sample Hello World Application) using the frameworks provided in the input.
+This is a web application running on Django web framework, that takes input from the user (Frontend and Backend options of avaiable techstack) and creates a dummy project (sample Hello World Application) using the frameworks provided in the input.
 
-# Tech Stack used
+The web application provides user with following options:
+FrontEnd: React, Angular, Vue
+BackEnd: Django, Flask, Express, Spring
+
+# Tech Stack used to create the web application
 - Backend: Django (v3.2)
 - Language: Python (v3.6.3)
 - Frontend: HTML, CSS, Bootstrap, JQuery.
