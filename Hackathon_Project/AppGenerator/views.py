@@ -42,8 +42,8 @@ def searchProjectFolder(request):
             bInput = request.POST.get("backend")
             
             fInput = "_dot_".join(fInput.split("."))
+            fInput = "".join(fInput.split(" "))
             bInput = "_dot_".join(bInput.split("."))
-            # print(fInput, bInput)
             return HttpResponseRedirect("/setup/"+fInput+"-"+bInput) 
     else:
         return HttpResponseRedirect("/backend-form")      
@@ -70,7 +70,7 @@ def setup(request, frontend, backend):
     
     frontend = ".".join(frontend.split("_dot_"))
     backend = ".".join(backend.split("_dot_"))
-    print(frontend, backend)
+    
     project = Project.objects.get(frontend=frontend, backend=backend)
     context = {
         'project': project,
