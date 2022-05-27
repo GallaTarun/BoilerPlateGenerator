@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,#667eea,#764ba2);
+}
+
+.header {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #374957;
+}
+
+.app-info {
+    line-height: 1.5;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #638198;
+}
+
+.main-div {
+    padding: 2rem;
+    height: fit-content;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;  
+    box-shadow: 7px 11px 32px -14px rgba(0,0,0,0.75);  
+    /* position: absolute; */
+    background-color: white;
+    /* right: 5%; */
+    /* top: 30%; */
+}
+
+.input-form {
+    margin: 1.5rem auto;
+    text-align: left;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin: 1rem 0 0.5rem;
+    display:block;
+}
+
+#id_frontend, #backend{
+    height: 40px;
+    width: 300px;
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 7px;
+    cursor: pointer;
+    /* border: none; */
+    /* border-bottom: 2px solid #0d6efd; */
+    border-radius: 5px;
+    padding-left: 1rem;
+}
+
+#id_frontend {
+    display: inline-flex;   
+}
+
+input {
+    height: 40px;
+    width: 100px;
+    position: relative;
+    top: 27px;
+    margin: 1rem;
+    outline: none!important;
+}
+
+#id_frontend:focus, #backend {
+    outline: none!important;
+}
+
+.inline {
+    display: inline-flex;
+    height: fit-content;
+    width: fit-content;
+}
+
+.btns {
+    display: block;
+    margin: 1.5rem auto 0;
+    color: white;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #dc3545;
+    height:100%;
+    width: 100%;
+}
+
+a:hover, button:hover {
+    color: white;
+}
+
+@media screen and (max-width:500px) {
+    .main-div {
+        height: fit-content;
+        width: 90%;
+        left: 0;
+        right: 0;
+        top:20%;
+        margin: 0 auto;
+    }
+
+    #id_frontend, #backend {
+        width: 90%;
+        display: block;
+    }
+
+    input[type=submit] {
+        position: static;
+        margin: 0.5rem auto;
+    }
+
+    .inline {
+        display: block;
+        width: 100%;
+        height: fit-content
+    }
+}
