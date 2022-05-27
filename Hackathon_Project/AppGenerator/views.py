@@ -43,7 +43,7 @@ def searchProjectFolder(request):
             
             fInput = "_dot_".join(fInput.split("."))
             bInput = "_dot_".join(bInput.split("."))
-            print(fInput, bInput)
+            # print(fInput, bInput)
             return HttpResponseRedirect("/setup/"+fInput+"-"+bInput) 
     else:
         return HttpResponseRedirect("/backend-form")      
@@ -59,10 +59,21 @@ def download(request, path):
 
 
 def setup(request, frontend, backend):
+    docFileName = frontend + "-" + backend + ".txt"
+    documentation = []
+    with open(os.path.join(os.path.abspath("./static/docs/"),docFileName), "r") as f:
+        for line in f.readlines():
+            line = "".join(line.split("\t"))
+            line = "".join(line.split("\n"))
+            documentation .append(line)
+    f.close()
+    
     frontend = ".".join(frontend.split("_dot_"))
     backend = ".".join(backend.split("_dot_"))
     print(frontend, backend)
     project = Project.objects.get(frontend=frontend, backend=backend)
-    context = {}
-    context['project'] = project
+    context = {
+        'project': project,
+        'documentation': documentation
+    }
     return render(request, 'AppGenerator/setup.html', context)

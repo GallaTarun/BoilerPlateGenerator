@@ -5,9 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ project.frontend }} <-> {{ project.backend }}</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/css/setup.css">
 </head>
 <body>
-    <h3>{{ project.frontend }} <-> {{ project.backend }}</h3>
-    <button><a href="download/{{ project.projectFolder }}">Download</a></button>
+    <h3 class="title">{{ project.frontend }} <-> {{ project.backend }}</h3>
+    <div class="container-fluid documentation">
+        {% for l in documentation %}
+            {% if l.0 == '$' %}
+                <p class="doc-line terminal">{{ l }}</p>
+            {% else %}
+                <p class="doc-line">{{ l }}</p>
+            {% endif %}
+        {% endfor %}
+        <button class="download btn btn-success"><a href="download/{{ project.projectFolder }}">Download</a></button>
+    </div>
 </body>
 </html>
