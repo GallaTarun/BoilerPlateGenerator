@@ -1,0 +1,13 @@
+Clicking on the download button will downloads an application which is downloaded with Vue.js as Frontend and Django as Backend.
+
+To run the application do the following steps:
+	1) Make sure python and node is installed in to the system
+	2) Go the backend directory and start the server using the following command
+		$ python manage.py runserver
+	3) Go to the client folder and start the client server using the following command
+		$ npm start
+	4) You would see the application is loaded with data coming from backend python and display using react 
+	5) You can edit and add functionalitites to the application
+
+Here is the official documentation page for Django: https://docs.djangoproject.com/en/4.0/
+Here is the official documentation page for React: https://reactjs.org/docs/getting-started.html
