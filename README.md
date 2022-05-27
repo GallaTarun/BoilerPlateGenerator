@@ -1,4 +1,4 @@
-# BoilerPlateGenerator
+# Skeleton Code Generator
 
 ## Airbus Aerothon 4.0 Finale Round
 Problem Statement :
